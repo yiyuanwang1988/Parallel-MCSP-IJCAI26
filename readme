@@ -1,0 +1,17 @@
+compile:
+
+mpic++ -O3 -march=native -ffast-math -pedantic -Wall -std=c++17 -I. mpi/main.cpp mpi/Master.cpp mpi/Worker.cpp  mpi/Node.cpp mpi/Tree.cpp McSplitDSB/mcsp.cpp McSplitDSB/graph.cpp  RRSplit/mcsp.cpp RRSplit/graph.cpp McSplitDAL/mcsp.cpp McSplitDAL/graph.cpp -pthread -o mpi/main
+
+
+run:
+
+
+mpirun -np 8 ./main min_max -P ./images-CVIU11/patterns/pattern1 -T ./images-CVIU11/targets/target1 -l -q -t 1800 -S 3
+
+-np: the number of processes
+-P: input pattern graph 
+-T: input target graph 
+-l: format of datasets 
+-q: quiet
+-t: time limit (seconds)
+-S: solver(1:ParaDSB, 2:ParaDAL, 3:ParaRRS)
