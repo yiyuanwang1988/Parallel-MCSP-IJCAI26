@@ -6,7 +6,7 @@ mpic++ -O3 -march=native -ffast-math -pedantic -Wall -std=c++17 -I. mpi/main.cpp
 run:
 
 
-mpirun -np 8 ./main min_max -P ./images-CVIU11/patterns/pattern1 -T ./images-CVIU11/targets/target1 -l -q -t 1800 -S 3
+mpirun -np 8 ./mpi/main min_max -P ./images-CVIU11/patterns/pattern1 -T ./images-CVIU11/targets/target1 -l -q -t 1800 -S 3
 
 -np: the number of processes
 -P: input pattern graph 
