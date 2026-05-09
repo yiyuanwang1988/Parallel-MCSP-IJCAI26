@@ -19,7 +19,7 @@ The above parameters are explained as follows:
 -   `-l`: format of datasets
 -   `-q`: quiet output
 -   `-t`: time limit (seconds)
--   `-S`: specifies the algorithm to execute (1 for ParaDSB, 2 for ParaDAL, 3 for ParaRRS)
+-   `-S`: specifies the algorithm to execute (1 for ParaDAL, 2 for ParaDSB, 3 for ParaRRS)
 
 
 
